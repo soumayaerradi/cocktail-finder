@@ -1,0 +1,53 @@
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+
+  input {
+    width: 250px;
+    padding: 6px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 8px;
+    font-size: 12px;
+  }
+}
+
+.cocktail-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+.cocktail-card {
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  text-align: center;
+  font-size: 12px;
+  transition: transform 0.2s ease;
+
+  h3 {
+    font-size: 14px;
+    color: #333;
+    margin: 8px 0;
+  }
+
+  img {
+    width: 80%;
+    height: auto;
+    border-radius: 4px;
+  }
+
+  button {
+    margin-top: 6px;
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+  }
+}

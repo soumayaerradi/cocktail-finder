@@ -1,0 +1,14 @@
+<div class="search-container">
+  <input [(ngModel)]="query" placeholder="Search for a cocktail..." />
+  <button (click)="searchCocktails()">Search</button>
+</div>
+
+<div class="cocktail-list">
+  @for (cocktail of cocktails; track cocktail.idDrink) {
+    <div class="cocktail-card">
+      <h3>{{ cocktail.strDrink }}</h3>
+      <img [src]="cocktail.strDrinkThumb" alt="{{ cocktail.strDrink }}" />
+      <button (click)="viewDetails(cocktail.idDrink)">View Details</button>
+    </div>
+  }
+</div>

@@ -1,0 +1,22 @@
+<div class="cocktail-details-container">
+  @if (cocktail) {
+    <div class="cocktail-detail">
+      <h2>{{ cocktail.strDrink }}</h2>
+      <img [src]="cocktail.strDrinkThumb" alt="{{ cocktail.strDrink }}" />
+
+      @if (cocktail.strCategory) {
+        <p><strong>Category:</strong> {{ cocktail.strCategory }}</p>
+      }
+
+      @if (cocktail.strGlass) {
+        <p><strong>Glass:</strong> {{ cocktail.strGlass }}</p>
+      }
+
+      @if (cocktail.strInstructions) {
+        <p><strong>Instructions:</strong> {{ cocktail.strInstructions }}</p>
+      }
+
+      <button routerLink="/">Back to Search</button>
+    </div>
+  }
+</div>
